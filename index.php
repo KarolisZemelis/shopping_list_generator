@@ -18,7 +18,16 @@ $error_message = $_GET['error'] ?? '';
 </head>
 
 <body>
+    <?php if (error_message): ?>
+    <p style='color: red'><?php echo htmlspecialchars($error_message); ?></p>
+    <?php endif;?>
+    <form action="php/login.php" method='POST'>
+        <label for="username">Username:</label>
+        <input type="text" name='username' id='username' required>
 
+        <label for="password">Password:</label>
+        <input type="text" name='password' id='password' required>
+    </form>
 </body>
 
 </html>
