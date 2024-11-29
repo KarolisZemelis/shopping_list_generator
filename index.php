@@ -18,7 +18,7 @@ $error_message = $_GET['error'] ?? '';
 </head>
 
 <body>
-    <?php if (error_message): ?>
+    <?php if ($error_message): ?>
     <p style='color: red'><?php echo htmlspecialchars($error_message); ?></p>
     <?php endif;?>
     <form action="php/login.php" method='POST'>
