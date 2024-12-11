@@ -27,6 +27,7 @@ $error_message = $_GET['error'] ?? '';
 
         <label for="password">Password:</label>
         <input type="text" name='password' id='password' required>
+        <button>Submit</button>
     </form>
 </body>
 

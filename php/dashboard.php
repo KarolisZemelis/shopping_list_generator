@@ -38,7 +38,8 @@ $username = $_SESSION['user'] ?? 'Guest';
         <!-- here we show that the data from this form will be sent to a
         file php/add_recipe.php it will be sent using POST method () (used to send data which creates a resource in
         the server) -->
-        <form id="recipe-form" method="POST" action="./submit_recipe.php">
+        <!-- removed while setting up JS action="./submit_recipe.php" -->
+        <form id="recipe-form" method="POST">
             <label for="recipe-name">Recipe Name:</label>
             <input type="text" id="recipe-name" name="recipe_name" placeholder="Recipe Name" required>
             <label for="calories">Recipe Calories:</label>
@@ -48,9 +49,15 @@ $username = $_SESSION['user'] ?? 'Guest';
             </div>
 
             <button type="button" id="add-ingredient">Add Ingredient</button>
-            <button type="submit">Submit Recipe</button>
+            <button type="submit" id='submitRecipe'>Submit Recipe</button>
         </form>
+        <?php 
 
+    echo '<pre>';
+    print_r($_POST);
+    echo '</pre>';
+
+?>
     </main>
 
     <!-- Logout Link -->
